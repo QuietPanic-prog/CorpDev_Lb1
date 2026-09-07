@@ -29,5 +29,6 @@
 ## Скриншот работы приложения
 ### 1. Форма ввода данных (`/form`)
 <img width="507" height="593" alt="image" src="https://github.com/user-attachments/assets/3bb3cd3b-143a-44fc-9830-6f899b23ee6c" />
+
 ### 2. Результат обработки данных (`/form` - POST)
 <img width="504" height="321" alt="image" src="https://github.com/user-attachments/assets/59f7541c-299f-4ed6-9358-41549f60e43e" />
