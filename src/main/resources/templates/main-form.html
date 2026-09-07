@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 1</title>
+    <link rel="stylesheet" th:href="@{/css/main-style.css}">
+<!--    <style>-->
+<!--        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f7f7f7; }-->
+<!--        .card { background: white; padding: 20px; border-radius: 8px; max-width: 450px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }-->
+<!--        .row { margin-bottom: 12px; }-->
+<!--        label { display: block; margin-bottom: 4px; font-weight: bold; }-->
+<!--        input[type="text"], input[type="number"], input[type="email"] { width: 100%; padding: 8px; box-sizing: border-box; }-->
+<!--        input[type="submit"] { background: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; }-->
+<!--    </style>-->
+</head>
+<body>
+
+<div class="card">
+    <h2>Форма информации о студенте</h2>
+
+    <form th:action="@{/form}" th:object="${student}" method="post">
+        <div class="row">
+            <label>ID студента:</label>
+            <input type="number" th:field="*{id}" required />
+        </div>
+
+        <div class="row">
+            <label>Фамилия:</label>
+            <input type="text" th:field="*{lastName}" required />
+        </div>
+
+        <div class="row">
+            <label>Имя:</label>
+            <input type="text" th:field="*{firstName}" required />
+        </div>
+
+        <div class="row">
+            <label>Отчество:</label>
+            <input type="text" th:field="*{middleName}" />
+        </div>
+
+        <div class="row">
+            <label>E-mail:</label>
+            <input type="email" th:field="*{email}" required />
+        </div>
+
+        <div class="row">
+            <label>Год поступления:</label>
+            <input type="number" th:field="*{admissionYear}" placeholder="например: 2024" required />
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Отправить данные" />
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

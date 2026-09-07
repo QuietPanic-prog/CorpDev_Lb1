@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация о студенте</title>
+    <link rel="stylesheet" th:href="@{/css/result-style.css}">
+<!--    <style>-->
+<!--        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f7f7f7; }-->
+<!--        .card { background: white; padding: 20px; border-radius: 8px; max-width: 450px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }-->
+<!--        p { margin: 8px 0; }-->
+<!--        .badge { color: #d9534f; font-weight: bold; }-->
+<!--    </style>-->
+</head>
+<body>
+
+<div class="card">
+    <h2>Результаты регистрации</h2>
+    <p><b>ID:</b> <span th:text="${student.id}"></span></p>
+    <p><b>ФИО:</b> <span th:text="${student.lastName + ' ' + student.firstName + ' ' + student.middleName}"></span></p>
+    <p><b>E-mail:</b> <span th:text="${student.email}"></span></p>
+    <p><b>Год поступления:</b> <span th:text="${student.admissionYear}"></span></p>
+    <hr>
+    <p><b>Группа:</b> <span class="badge" th:text="${student.group}"></span></p>
+    <p><b>Логин портала:</b> <span class="badge" th:text="${student.login}"></span></p>
+    <br>
+    <a th:href="@{/form}">Ввести новую информацию</a>
+</div>
+
+</body>
+</html>
